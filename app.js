@@ -7,7 +7,7 @@ dotenv.config()
 const app = express()
 
 app.use(cors({
-    origin: 'https://aisoft-payment-qnu1.onrender.com',
+    origin: 'http://localhost:5173/',
     methods: ['GET', 'POST', 'PUT', 'DELETE']
 }));
 
