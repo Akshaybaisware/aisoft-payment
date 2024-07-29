@@ -1,21 +1,21 @@
 import express, { json } from "express";
-import cors from 'cors'
+// import cors from 'cors'
 import dotenv from "dotenv"
 import router from "./router/paymentRoute.js";
 
 dotenv.config()
 const app = express()
 
-const allowedOrigins = ['http://localhost:3030', 'http://localhost:5173',"https://aisoft-payment-qnu1.onrender.com"];
-app.use(cors({
-    origin: function (origin, callback) {
-        if (!origin || allowedOrigins.includes(origin)) {
-            callback(null, true);
-        } else {
-            callback(new Error('Not allowed by CORS'));
-        }
-    }
-}));
+// const allowedOrigins = ['http://localhost:3030', 'http://localhost:5173',"https://aisoft-payment-qnu1.onrender.com"];
+// app.use(cors({
+//     origin: function (origin, callback) {
+//         if (!origin || allowedOrigins.includes(origin)) {
+//             callback(null, true);
+//         } else {
+//             callback(new Error('Not allowed by CORS'));
+//         }
+//     }
+// }));
 
 app.use(json());
 app.use(express.urlencoded({ extended: true }));
