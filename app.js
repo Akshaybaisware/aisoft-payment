@@ -6,7 +6,7 @@ import router from "./router/paymentRoute.js";
 dotenv.config()
 const app = express()
 
-const allowedOrigins = ['http://localhost:3030','http://localhost:5174'];
+const allowedOrigins = ['http://localhost:3030','http://localhost:5174' , 'https://aisoft-payment-production.up.railway.app'];
 app.use(cors({
     origin: function (origin, callback) {
         if (!origin || allowedOrigins.includes(origin)) {
