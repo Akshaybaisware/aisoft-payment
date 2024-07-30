@@ -38,7 +38,7 @@ import router from "./router/paymentRoute.js";
 dotenv.config();
 const app = express();
 
-const allowedOrigins = ['https://aisoftsolution.in'];
+const allowedOrigins = ['https://aisoftsolution.in' ,'http://localhost:5173'];
 
 app.use(cors({
     origin: function (origin, callback) {
